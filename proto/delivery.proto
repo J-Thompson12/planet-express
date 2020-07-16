@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package planetexpress;
+option go_package = "pkg/planetexpress";
+
+message DeliveryResponse {
+    string item = 1;
+    bool delivered = 2;
+    
+  }
+
+  message DeliveryRequest {
+    string item = 1;
+    int32 quantity = 2;
+    string location = 3;
+  }
+  
+  message GetDeliveryResponse {
+    DeliveryResponse delivery = 1;
+  }
+
+  message GetDeliveryRequest {
+    DeliveryRequest delivery = 1;
+  }
+
+  message ListDeliveriesResponse {
+    repeated DeliveryResponse list = 1;
+  }

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package planetexpress;
+option go_package = "pkg/planetexpress";
+
+message Crew {
+    enum Member {
+        leela = 0;
+        Fry = 1;
+        Bender = 2;
+    }
+
+    string member = 1;
+    map<string, string> status = 2;
+  }
+  
+  message GetCrewResponse {
+    repeated Crew crew = 1;
+  }
