@@ -1,0 +1,14 @@
+---
+apiVersion: wego.weave.works/v1alpha1
+kind: Application
+metadata:
+  labels:
+    wego.weave.works/app-identifier: wego-a88caf5fcb3f17ca510a8f92afba8900
+  name: planet-express
+  namespace: wego-system
+spec:
+  branch: master
+  deployment_type: kustomize
+  path: ./
+  source_type: git
+  url: ssh://git@github.com/J-Thompson12/planet-express.git
